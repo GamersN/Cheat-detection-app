@@ -16,19 +16,12 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "owner": "gamersn",  // Optional, if the project is owned by a specific Expo account or org
-    "projectId": "430ed1d6-3c15-46f2-8bb1-c4d966435df2"
+    "projectId": "5f9968f2-7c83-4d92-97e3-10f47e3e93b5"
   }
 }
