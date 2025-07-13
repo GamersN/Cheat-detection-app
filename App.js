@@ -1,45 +1,25 @@
-import React, { useState } from 'react';
-import { View, Text, Button, Image, StyleSheet } from 'react-native';
-import * as ImagePicker from 'expo-image-picker';
-
-export default function App() {
-  const [image, setImage] = useState(null);
-
-  const pickImage = async () => {
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: false,
-      quality: 1,
-    });
-
-    if (!result.canceled) {
-      setImage(result.assets[0].uri);
-    }
-  };
-
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>FPS Cheat Detector</Text>
-      <Button title="Pick Screenshot" onPress={pickImage} />
-      {image && (
-        <Image source={{ uri: image }} style={styles.image} />
-      )}
-      <Text style={styles.result}>Detection: [Mocked] No snap detected.</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1, alignItems: 'center', justifyContent: 'center', padding: 20
-  },
-  title: {
-    fontSize: 22, marginBottom: 20
-  },
-  image: {
-    width: 300, height: 300, marginTop: 20
-  },
-  result: {
-    marginTop: 20, fontSize: 16
+{
+  "expo": {
+    "name": "CheatDetectionApp",
+    "slug": "cheat-detection-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "projectId": "e96a3203-7bbd-4330-94b7-f36b903bf62e"
   }
-});
+}
