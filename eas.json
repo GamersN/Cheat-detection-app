@@ -1,14 +1,34 @@
 {
-  "cli": {
-    "version": ">= 3.13.0",
-    "appVersionSource": "local"
-  },
-  "build": {
-    "preview": {
-      "distribution": "internal",
-      "android": {
-        "buildType": "apk"
+  "expo": {
+    "name": "CheatDetectionApp",
+    "slug": "cheat-detection-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
       }
-    }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "owner": "gamersn",  // Optional, if the project is owned by a specific Expo account or org
+    "projectId": "430ed1d6-3c15-46f2-8bb1-c4d966435df2"
   }
 }
